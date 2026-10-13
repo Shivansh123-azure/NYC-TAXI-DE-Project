@@ -1,0 +1,20 @@
+{
+	"name": "nyc_rawdata_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "nyc_data_lake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "trip2023",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
